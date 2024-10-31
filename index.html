@@ -210,66 +210,59 @@ able to use it on any class/professor to provide useful and actionable feedback,
 so we decided to start with classes that we're in. This will help us build the model,
 whoch can then be adapted for all kinds of courses.
 <p>
+<b>Mentor Comments and Evaluations</b>
+  <p>
+    In our call, Shirley suggested that we incorporate the professors' perspectives into our project by conducting interviews with CSCI faculty. These conversations would allow us to understand what type of feedback professors find most helpful and what specific insights would be most actionable for them in enhancing teaching and learning. Additionally, Shirley recommended that we expand our analysis to include more nuanced emotional analysis within the student feedback. This would help achieve our initial goal to extract deeper insights that go beyond basic feedback, providing actionable recommendations that align more closely with professors' needs and expectations.
+  </p>
+  <p>
+    Thus, our next steps will be to initiate interviews with some of the CSCI professors to gather their insights on the types of feedback that would be most useful for them. We plan to ask specific questions aimed at identifying actionable feedback that could enhance their teaching practices and improve student engagement. For the emotional analysis, we intend to use advanced NLP tools like VADER and TextBlob for sentiment analysis, along with transformer models such as BERT or RoBERTa to capture more nuanced emotional tones in the feedback. Additionally, we aim to generate a condensed paragraph that integrates and synthesizes data from Rate My Professor (RMP) and the Student Rating of Teaching (SRT) system, providing professors with a focused summary that highlights key insights. To achieve this, we plan to explore text summarization models available on Hugging Face, which can effectively condense large volumes of feedback into concise, meaningful summaries. By combining these tools, we hope to provide a rich, layered understanding of student sentiments, translating them into actionable insights that professors can learn from.
+  </p>
 
 </p>
 
 <p>
-<b>Questions</b>
+  <b>Questions</b>
 </p>
 
-<p>
-The RateMyProfessor Code of Conduct does mention that web "scraping" isn't
-allowed (without prior permission anyways). Is it ok to use it for this project?
-<p>
-Is there any way to access SRS data from the University for the classes that
-we're focusing on?
-<p>
-Are we allowed to use code that was already constructed for some parts of our project?
-For example, there is some code online for the RateMyProfessor web scraping. Could we repurpose
-that, with attribution, to take care of that part of the data collection?
-</p>
+<ul style="list-style-type: disc; margin-left: 20px;">
+  <li>The RateMyProfessor Code of Conduct mentions that web "scraping" isn't allowed (without prior permission). Is it okay to use it for this project?</li>
+
+  <li>Is there any way to access SRS data from the University for the classes that we're focusing on?</li>
+
+  <li>Are we allowed to use code that was already constructed for some parts of our project? For example, there is some code online for the RateMyProfessor web scraping. Could we repurpose that, with attribution, to take care of that part of the data collection?</li>
+</ul>
 
 <p>
 <b>Plan for the Future</b>
 </p>
   
 <p>
-Step 1: Complete Data Collection & Cleaning. Based off of the answers that we get from OH
-about the SRS data and using RMP, we'll clean up the data to make it easy for the
-sentiment analysis model to read and use it. This will include making sure the class
-name, professor, and feedback is listed for each class. For different platforms, we'll also focus
-on different things (like RMP provides some other measures including difficulty), which the SRS may label
-differently or not have at all. Our survey was designed to align with these different measures
-as closely as possible.
-(Done by: Nov. 11)
-<p>
-Step 2: Create Sentiment Analysis Model. Using the different pre-trained BERT models that we mentioned,
-we want to create the best possible sentiment analysis model. We will also need to implement clustering, again
-by testing out different clustering methods and finding which is best, to clump together
-common themes in the feedback that's given by students. We'll focus on the sentiment analysis first
-to see what themes can be pulled from that, then implement the clustering to look for specific words.
-(Done by: Nov. 20)
-<p>
-Step 3: Visualize using Graphical Representations. Once we finalize the sentiment analysis model and clustering,
-we want to focus on how we will visualize it. We have some intial ideas, including graphs and word clouds,
-so we will start here. However, since the point of the project is to help professors understand the feedback that they're given
-and implement it, we will present the visualizations to different professors to see how it can be improved.
-We then need to implement the given feedback for our finalized visualizations.
-(Done by: Nov. 27)
-<p>
-Step 4: Final Poster & Project Report. Our overall goal is to complete the project by Thanksgiving break. Then we can
-use the break to create the poster and start the report, and finish up the report once our final
-presentation is complete.
-(Done by: Dec. 3 & Dec. 12)
-</p>
+  <b>Step 1: Complete Data Collection, Cleaning & Initial Processing (Done by: Nov. 11): </b> We will clean and standardize the data to ensure it is ready for analysis. This includes aligning data formats for class name, professor, and feedback entries across platforms like SRS and RMP. Additionally, we plan to start conducting interviews with CSCI professors to understand their feedback preferences and identify the most useful insights they would like to gain from student feedback. These insights will guide the development of our web application.
+  </p>
+  
+  <p>
+  <b>Step 2: Develop Sentiment Analysis Model, Implement NLP Techniques, and Generate Summarized Feedback (Done by: Nov. 20): </b> We will use advanced NLP models such as pre-trained BERT and Transformer models from Hugging Face to create a robust sentiment analysis model. This model will capture nuanced emotional tones within student feedback. Additionally, we aim to generate a concise paragraph for each professor through text-generaiton techniques in NLP, synthesizing data from RMP and SRS. This paragraph will highlight areas where professors are excelling and areas that may need improvement, based on common themes in the feedback. Clustering techniques will further help group feedback by specific topics, making the summary more focused and actionable.
+  </p>
+  
+  <p>
+  <b>Step 3: Visualize Data and Build a Web Application (Done by: Nov. 27): </b> Once the sentiment analysis model and clustering are finalized, we will focus on visualizing the results through graphical representations like graphs and word clouds. The web application will integrate these visualizations, allowing professors to explore feedback trends over time. As part of the development, we will share early versions of the visualizations with CSCI professors and incorporate their feedback to ensure the application meets their needs and provides actionable insights.
+  </p>
+  
+  <p>
+  <b>Step 4: Final Poster & Project Report (Done by: Dec. 3 & Dec. 12): </b> Our goal is to complete the analysis and web application development by Thanksgiving break. We will then use the break to prepare the poster and start the project report. After our final presentation, we will incorporate any additional insights into the report before submission.
+  </p>  
+  
 
 <hr>
     
 <h2 id="results">Results - PLACEHOLDER: NOT STARTED YET</h2>
 <p>
-<b>How did you measure success? What experiments were used? What were the results, both quantitative and qualitative? Did you succeed? Did you fail? Why?</b>
+  <ul style="list-style-type: disc; margin-left: 20px;">
+    <li>How did you measure success? What experiments were used? What were the results, both quantitative and qualitative? Did you succeed? Did you fail? Why?</li>
+  </ul>
 </p>
-<p>
+
+<!-- <p>
 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
 </p>
 <table>
@@ -301,7 +294,7 @@ Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed 
 <div style="text-align: center;">
 <img style="height: 300px;" alt="" src="./files/results.png">
 </div>
-<br><br>
+<br><br> -->
 
 <hr>
 
@@ -309,12 +302,13 @@ Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed 
 
 <h2 id="conclusion">Conclusion and Future Work - PLACEHOLDER: NOT STARTED YET</h2>
 <p>
-
-  How easily are your results able to be reproduced by others?
-  Did your dataset or annotation affect other people's choice of research or development projects to undertake?
-  Does your work have potential harm or risk to our society? What kinds? If so, how can you address them?
-  What limitations does your model have? How can you extend your work for future research?</p>
-
+  <ul style="list-style-type: disc; margin-left: 20px;">
+    <li>How easily are your results able to be reproduced by others?</li>
+    <li>Did your dataset or annotation affect other people's choice of research or development projects to undertake?</li>
+    <li>Does your work have potential harm or risk to our society? What kinds? If so, how can you address them?</li>
+    <li>What limitations does your model have? How can you extend your work for future research?</li>
+  </ul>
+</p>
 
 <hr>
 
