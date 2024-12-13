@@ -286,13 +286,17 @@ whoch can then be adapted for all kinds of courses.
   We measured success by evaluating the accuracy of our models and the utility of the insights they provided. For sentiment and emotion analysis, we compared model predictions against human evaluations for three professors, focusing on emotions like joy, fear, and anger. We calculated accuracy by matching human-labeled emotions with model-generated ones, achieving a 66% accuracy rate overall. While this was below the common benchmark of 70%, we viewed it as a relative success due to the exploratory nature of our project and the small evaluation sample.
   </p>
 
-  <p class="sys-img"><img src="./files/emotion_accuracy_plot.png" alt="imgname"></p>
+  <p class="sys-img">
+    <img src="./files/emotion_accuracy_plot.png" alt="imgname" width="70%">
+  </p>
   
   <p>
   For keyword analysis, we used RateMyProfessors tags as a baseline, calculating metrics like precision, recall, and F1 score. Results showed strong precision and recall (around 74%) but low accuracy (20%), likely because our model generated more nuanced tags than those available on RateMyProfessors. To assess the Gemini-generated feedback, we conducted a qualitative evaluation, ensuring its readability and alignment with the extracted insights. Professors found the feedback understandable and actionable, meeting our usability goals.
   </p>
   
-  <p class="sys-img"><img src="./files/kwaccuracy.png" alt="imgname"></p>
+  <p class="sys-img">
+    <img src="./files/kwaccuracy.png" alt="imgname" width="70%">
+  </p>
 
   <p>
   Overall, the project succeeded in demonstrating how specialized NLP models can generate meaningful insights, though challenges like classifying joy and low sample sizes highlighted areas for improvement. Future work could refine evaluation methods and expand datasets to address these limitations.
