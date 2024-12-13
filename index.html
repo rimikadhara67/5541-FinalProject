@@ -182,8 +182,6 @@ Our project aims to address the challenges of analyzing large volumes of nuanced
 
 <img src="files/approach.png" alt="Approach Overview" style="width:100%;max-width:600px;margin:auto;display:block;"/>
 
-<h3>Methodology</h3>
-
 <p>
 <b>Step 1: Data Collection.</b> We utilized a web scraper to extract student feedback from RateMyProfessors (RMP), focusing on Computer Science professors at the University of Minnesota. The dataset included numerical ratings and open-ended textual comments. However, the RMP data has limitations, including potential bias from a self-selected student pool and a lack of representativeness. Initially, our approach was designed for the SRT data collected by the University, but privacy policies restricted access.
 </p>
@@ -324,17 +322,46 @@ Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed 
 
 
 
-<h2 id="conclusion">Conclusion and Future Work - PLACEHOLDER: NOT STARTED YET</h2>
+<h2 id="discussion">Discussion and Future Work</h2>
+
 <p>
-  <ul style="list-style-type: disc; margin-left: 20px;">
-    <li>How easily are your results able to be reproduced by others?</li>
-    <li>Did your dataset or annotation affect other people's choice of research or development projects to undertake?</li>
-    <li>Does your work have potential harm or risk to our society? What kinds? If so, how can you address them?</li>
-    <li>What limitations does your model have? How can you extend your work for future research?</li>
-  </ul>
+<b>How easily are your results able to be reproduced by others?</b>
+</p>
+<p>
+Our methodology is highly replicable due to the use of well-documented, widely available tools such as VADER, DistilRoBERTa, and NLTK. Detailed descriptions of our data preprocessing, analysis, and evaluation steps ensure that others can follow our approach with similar datasets. However, access to reliable and unbiased datasets, such as institutional feedback data, remains a critical requirement for reproducing our results.
+</p>
+
+<p>
+<b>Did your dataset or annotation affect other people's choice of research or development projects to undertake?</b>
+</p>
+<p>
+This question is not as revelant to our project since we don't provide the community with any new data. However, by demonstrating the potential of publicly available data for actionable insights, our work highlights the need for more accessible and comprehensive datasets. This could inspire other researchers to advocate for institutional data-sharing practices or explore creative ways to leverage publicly available data. Our project also emphasizes the importance of incorporating sentiment and emotion analyses in feedback systems, which could influence future research directions in education and beyond.
+</p>
+
+<p>
+<b>Does your work have potential harm or risk to our society? What kinds? If so, how can you address them?</b>
+</p>
+<p>
+While our project aims to enhance educational outcomes, it raises ethical concerns, including potential bias in publicly available data and privacy issues for the professors related to feedback. To mitigate these risks, we tried to employ techniques to reduce bias in analysis and highlighted the need for representative datasets. However, we adhere to the guidelines that were adhered by the RateMyProfessor site and try our best to reduce bias in our analysis. Beyond this, we don't believe there's any other ethical concerns for our project.
+</p>
+
+<p>
+<b>What limitations does your model have? How can you extend your work for future research?</b>
+</p>
+<p>
+The primary limitation is the reliance on RateMyProfessors data, which lacks the depth and representativeness of institution-collected datasets. We really hoped to gain access to the SRT data from the University, but weren't able to aquire it. Future work should focus on collaborating with academic institutions to access SRT data while addressing privacy concerns. Additionally, incorporating more contextual factors, such as course difficulty (in reality instead of from student feedback) and class size, could improve the accuracy of our analyses. Expanding the scope of the web application to include dynamic updates and enhanced usability features would also increase its practical value. Finally, validating our approach across diverse educational contexts would strengthen its generalizability.
 </p>
 
 <hr>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>
+In this project, we set out to bridge the gap between student feedback and actionable insights using advanced NLP techniques. By employing sentiment and emotion analysis alongside keyword extraction, we aimed to provide instructors with a deeper understanding of student needs, helping to improve teaching practices and learning experiences. Despite challenges such as limited access to institutional datasets and potential biases in publicly available data, our approach demonstrated the potential of leveraging tools like VADER, DistilRoBERTa, and Google Gemini for impactful feedback analysis. 
+
+We are grateful for the opportunity to explore this meaningful intersection of NLP and education, and for the support of our instructors and peers who provided invaluable guidance. Our work emphasizes the importance of applying technological advancements to enhance education, showcasing how data-driven insights can elevate classroom experiences. While this project marks a significant step forward, it also opens doors for future exploration and improvement. We hope our efforts inspire further research and innovation in making education more responsive, inclusive, and effective.
+</p>
+
 
 
   </div>
