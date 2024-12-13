@@ -177,11 +177,37 @@ be curated for them specifically rather than be a general sentiment analysis mod
 <h2 id="approach">Approach</h2>
 
 <p>
+Our project aims to address the challenges of analyzing large volumes of nuanced student feedback to derive actionable insights. Below, we outline the key steps in our methodology and highlight the tools and techniques employed at each stage.
+</p>
+
+<img src="files/approach.png" alt="Approach Overview" style="width:100%;max-width:600px;margin:auto;display:block;"/>
+
+<h3>Methodology</h3>
+
+<p>
+<b>Step 1: Data Collection.</b> We utilized a web scraper to extract student feedback from RateMyProfessors (RMP), focusing on Computer Science professors at the University of Minnesota. The dataset included numerical ratings and open-ended textual comments. However, the RMP data has limitations, including potential bias from a self-selected student pool and a lack of representativeness. Initially, our approach was designed for the SRT data collected by the University, but privacy policies restricted access.
+</p>
+
+<p>
+<b>Step 2: NLP Analysis.</b> We employed VADER Sentiment Analysis to classify comments as positive, neutral, or negative, establishing a baseline for understanding feedback tone. To capture nuanced emotional expressions, we used a pre-trained DistilRoBERTa model to classify emotions such as joy, anger, fear, and surprise. Additionally, we leveraged NLTK and Gensim tools to extract key phrases and identify recurring tags for each professor. This highlighted themes such as "clear grading criteria," "engaging lectures," and "challenging coursework," providing granular insights.
+</p>
+
+<p>
+<b>Step 3: Feedback Summarization.</b> Processed data was used to prompt the Google Gemini model to generate structured feedback summaries and actionable recommendations for instructors. This step transformed raw analysis into practical guidance.
+</p>
+
+<p>
+<b>Step 4: Evaluation.</b> Human evaluations compared model-generated outputs against manually curated benchmarks. Accuracy, precision, recall, and F1 scores were computed to validate sentiment and keyword analyses. Qualitative assessments of Gemini’s feedback summaries ensured relevance and quality.
+</p>
+
+<h3>Key Questions</h3>
+
+<p>
 <b>What did you do exactly? How did you solve the problem? Why did you think it would be successful? Is anything new in your approach?</b>
 </p>
 
 <p>
-IN PROGRESS.
+We addressed the challenge of analyzing large volumes of nuanced student feedback by extracting data from RateMyProfessors using a web scraper. Our NLP pipeline included VADER for sentiment analysis, DistilRoBERTa for emotion classification, and NLTK/Gensim for keyword extraction. This combination allowed us to identify key themes such as "clear grading criteria" and "engaging lectures" while generating actionable feedback through the Google Gemini model. Although our approach is not technically novel, its application in academia to improve teaching quality and student engagement is a meaningful initiative.
 </p>
 
 <p>
@@ -189,11 +215,9 @@ IN PROGRESS.
 </p>
 
 <p>
-One problem that we anticipated is having access to data. One of the most helpful datasets here would be the SRS data that the University
-collects on professors. We weren't sure if professors would allow us to access this data (or if they were even allowed to due to University
-policy), or if professors would allow us to send out our own surveys to collect feedback data. Seeing as educational feedback comments
-are a core part of our project, it was really important that we somehow find or create the data that we needed.
+One major anticipated challenge was data access. The ideal dataset, the University’s SRT feedback, was unavailable due to privacy policies. As an alternative, we used RMP data, which, while useful, has limitations such as potential bias and a smaller student pool. We also faced challenges in designing effective prompts for Gemini and ensuring the outputs aligned with practical instructor needs. Despite these challenges, our iterative adjustments to the pipeline and evaluation processes helped achieve the desired results.
 </p>
+
 
 <hr>
 
